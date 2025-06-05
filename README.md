@@ -4,13 +4,13 @@
 This repository contains the full pipeline for EEG signal processing and rule-based sleep stage classification using the Sleep-EDF Expanded Dataset (2013). The framework includes preprocessing, amplitude and power feature extraction (Hilbert, Welch, STFT), and stage classification with validation via expert-annotated hypnograms.
 
 SleepStageClassifier
-Overview
+# Overview
 
 SleepStageClassifier is a signal processing framework that automates sleep stage classification using full-night EEG recordings from the Sleep-EDF Database. Using frequency domain analysis, amplitude envelopes, and domain-specific thresholds, this rule-based system classifies EEG signals into standard AASM-defined stages: Wake, N1, N2, N3, and REM.
 
 This project uses open-source libraries such as MNE, YASA, SciPy, and NumPy to process EEG recordings and generate hypnograms validated against expert annotations.
 
-Features
+# Features
 EEG Preprocessing: Butterworth bandpass filtering and artifact mitigation.
 Sleep Stage Classification: Rule-based system using Delta/Theta/Alpha dominance, ratios, and temporal smoothing.
 Spectral and Temporal Analysis: Extracts Welch’s PSD, STFT-based spectrograms, and Hilbert amplitude envelopes.
@@ -18,7 +18,7 @@ Event Detection: Identifies spindles, K-complexes, and bursts using YASA’s det
 Full-Night Hypnogram Generation: Creates and validates sleep architecture using expert-labeled hypnograms.
 Visualization: Stage-wise PSDs, amplitude tables, and frequency transitions plotted with Matplotlib.
 
-Methodology
+# Methodology
 1. Data Source
 
 Dataset: Sleep-EDF Expanded (2013)
@@ -48,7 +48,7 @@ Output: Hypnogram
 
 Metrics: Accuracy, Cohen’s Kappa, Stage-wise F1 Scores
 Compared against: Expert hypnograms from PhysioNet
-📊 Results
+# Results
 Sleep Stage	Dominant Band	Classifier Accuracy
 N3	Delta (0.5–4 Hz)	High (Delta Power Threshold)
 N2	Spindles + Theta	Moderate
@@ -72,7 +72,7 @@ matplotlib
 pandas
 seaborn
 scikit-learn
-Usage
+# Usage
 Place .edf files in data/edf/
 Open analysis.ipynb and run all cells
 View output:
@@ -91,7 +91,7 @@ Clinical testing on disordered populations (sleep apnea, insomnia)
 - scikit-learn
 - statsmodels
 
-Install with:
+# Install with:
 
 ```bash
 pip install -r requirements.txt
