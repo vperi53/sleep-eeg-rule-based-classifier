@@ -54,15 +54,20 @@ Metrics: Accuracy, Cohen’s Kappa, Stage-wise F1 Scores
 Compared against: Expert hypnograms from PhysioNet
 # Results
 Sleep Stage	Dominant Band	Classifier Accuracy
+
 N3	Delta (0.5–4 Hz)	High (Delta Power Threshold)
+
 N2	Spindles + Theta	Moderate
+
 N1	Theta/Alpha	Moderate
+
 REM	Mixed Theta + Bursts	Variable
+
 Wake	Alpha	High
 
 
-pip install -r requirements.txt
-Run
+
+# Run
 
 jupyter notebook notebooks/analysis.ipynb
 Requirements
