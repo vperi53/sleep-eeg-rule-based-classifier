@@ -24,17 +24,20 @@ Visualization: Stage-wise PSDs, amplitude tables, and frequency transitions plot
 Dataset: Sleep-EDF Expanded (2013)
 Format: Polysomnographic (PSG) .edf recordings and expert-labeled hypnograms.
 Channels Used: Fpz-Cz, Pz-Oz.
+
 2. Preprocessing
 
 Sampling Rate: 100 Hz
 Filter: 0.5–30 Hz Butterworth
 Segmentation: 30-second epochs
+
 3. Feature Extraction
 
 Welch’s PSD: Computes absolute/relative band power in Delta (0.5–4 Hz), Theta (4–8 Hz), Alpha (8–12 Hz) bands.
 STFT: Short-Time Fourier Transform to detect time-varying spectral events.
 Hilbert Transform: Instantaneous amplitude envelopes for sleep-related transient detection.
 Spindle/K-Complex Detection: YASA’s rule-based detectors.
+
 4. Classification
 
 Rule-Based Classifier:
@@ -44,6 +47,7 @@ Theta dominance → N1
 Mixed alpha → Wake
 Smoothing: Majority voting across neighbors for robustness
 Output: Hypnogram
+
 5. Evaluation
 
 Metrics: Accuracy, Cohen’s Kappa, Stage-wise F1 Scores
