@@ -13,9 +13,7 @@ This repository contains the full pipeline for EEG signal processing and rule-ba
 - Hypnogram generation
 - Performance evaluation with accuracy, precision, recall
 
-## 📁 Directory Structure
 
-See the full layout [here](./docs/structure.md) (if you want to link the structure).
 
 ## 🧪 Requirements
 
